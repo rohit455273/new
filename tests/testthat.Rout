@@ -1,0 +1,54 @@
+
+R version 4.2.2 (2022-10-31 ucrt) -- "Innocent and Trusting"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(testthat)
+> 
+> test_dir(
++   "./testthat",
++   # Run in the app's environment containing all support methods.
++   env = shiny::loadSupport(),
++   # Display the regular progress output and throw an error if any test error is found
++   reporter = c("progress", "fail")
++ )
+Loading required package: shiny
+✔ | F W S  OK | Context
+
+⠏ |         0 | examplemodule                                                   
+⠏ |         0 | exampleModuleServer                                             
+⠋ |         1 | exampleModuleServer                                             
+⠹ |         3 | exampleModuleServer                                             
+✔ |         4 | exampleModuleServer [0.2s]
+
+⠏ |         0 | server                                                          
+⠏ |         0 | app                                                             
+⠋ |         1 | app                                                             
+✔ |         2 | app [0.2s]
+
+⠏ |         0 | sort                                                            
+⠏ |         0 | sort                                                            
+✔ |         2 | sort
+
+══ Results ═════════════════════════════════════════════════════════════════════
+Duration: 0.5 s
+
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 8 ]
+
+😸
+> 
+> proc.time()
+   user  system elapsed 
+   1.45    0.20    1.67 

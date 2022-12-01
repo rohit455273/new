@@ -1,0 +1,31 @@
+
+R version 4.2.2 (2022-10-31 ucrt) -- "Innocent and Trusting"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(shinytest)
+shinytest requires PhantomJS to record and run tests.
+• To install it, run shinytest::installDependencies()
+• If it is installed, please check it is available on the PATH
+> expect_pass(testApp("../", compareImages = grepl("^macOS", utils::osVersion)))
+Error in `app_path()`:
+! `appDir` doesn't contain 'app.R', 'server.R', or exactly one '.Rmd'
+Backtrace:
+    ▆
+ 1. ├─shinytest::expect_pass(...)
+ 2. └─shinytest::testApp("../", compareImages = grepl("^macOS", utils::osVersion))
+ 3.   └─shinytest:::app_path(appDir, "appDir")
+ 4.     └─rlang::abort(paste0("`", arg, "` doesn't contain 'app.R', 'server.R', or exactly one '.Rmd'"))
+Execution halted
