@@ -46,9 +46,7 @@ Loading required package: shiny
 Duration: 0.5 s
 
 [ FAIL 0 | WARN 0 | SKIP 0 | PASS 8 ]
-
-😸
 > 
 > proc.time()
    user  system elapsed 
-   1.45    0.20    1.67 
+   1.45    0.15    1.59 
